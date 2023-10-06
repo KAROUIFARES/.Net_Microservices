@@ -3,7 +3,9 @@ using Play.Catalog.Service.Entities;
 
 namespace Play.Catalog.Service.Repositories
 {
-    public class ItemsRepository
+
+
+    public class ItemsRepository : IItemRepository
     {
         private const string collectionName = "items";
         private readonly IMongoCollection<Item> dbCollection;
@@ -16,7 +18,7 @@ namespace Play.Catalog.Service.Repositories
             dbCollection = database.GetCollection<Item>(collectionName);
         }
 
-        public async Task<IReadOnlyCollection<Item>> getAllAsync()
+        public async Task<IReadOnlyCollection<Item>> GetAllAsync()
         {
             return await dbCollection.Find(filterBuilder.Empty).ToListAsync();
         }
@@ -51,5 +53,7 @@ namespace Play.Catalog.Service.Repositories
             FilterDefinition<Item> filter = filterBuilder.Eq(entity => entity.Id, id);
             await dbCollection.DeleteOneAsync(filter);
         }
+
+        
     }
 }

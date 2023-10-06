@@ -15,7 +15,7 @@ namespace Play.Catalog.Service.Controllers
         [HttpGet]
         public async Task<IEnumerable<ItemDto>> GetAsync()
         {   
-            var items=(await itemsRepository.getAllAsync())
+            var items=(await itemsRepository.GetAllAsync())
                         .Select(item=>item.AsDto());
             return items;
         }
