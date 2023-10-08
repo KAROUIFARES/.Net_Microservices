@@ -1228,7 +1228,7 @@
   "projectFileDependencyGroups": {
     "net7.0": [
       "Microsoft.AspNetCore.OpenApi >= 7.0.5",
-      "MongoDB.Driver >= 2.21.0",
+      "MongoDb.Driver >= 2.21.0",
       "Swashbuckle.AspNetCore >= 6.4.0"
     ]
   },
@@ -1274,7 +1274,7 @@
             "target": "Package",
             "version": "[7.0.5, )"
           },
-          "MongoDB.Driver": {
+          "MongoDb.Driver": {
             "target": "Package",
             "version": "[2.21.0, )"
           },

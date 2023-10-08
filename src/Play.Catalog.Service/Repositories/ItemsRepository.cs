@@ -5,16 +5,22 @@ namespace Play.Catalog.Service.Repositories
 {
 
 
-    public class ItemsRepository : IItemsRepository
+    public class ItemsRepository
     {
         private const string collectionName = "items";
         private readonly IMongoCollection<Item> dbCollection;
         private readonly FilterDefinitionBuilder<Item> filterBuilder = Builders<Item>.Filter;
 
-        public ItemsRepository(IMongoDatabase database)
+        public ItemsRepository()
         {
-            dbCollection = database.GetCollection<Item>(collectionName);
+            var mongoClient = new MongoClient("mongodb://localhost:27017");
+            var mongoDatabase = mongoClient.GetDatabase("Catalog");
+            dbCollection = mongoDatabase.GetCollection<Item>(collectionName);
         }
+        // public ItemsRepository(IMongoDatabase database)
+        // {
+        //     dbCollection = database.GetCollection<Item>(collectionName);
+        // }
 
         public async Task<IReadOnlyCollection<Item>> GetAllAsync()
         {
@@ -52,6 +58,6 @@ namespace Play.Catalog.Service.Repositories
             await dbCollection.DeleteOneAsync(filter);
         }
 
-        
+
     }
 }

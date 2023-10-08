@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\fares\\Play.Catalog\\src\\Play.Catalog.Service\\Play.Catalog.Service.csproj": {}
+    "c:\\Users\\fares\\Play.Catalog\\src\\Play.Catalog.Service\\Play.Catalog.Service.csproj": {}
   },
   "projects": {
-    "C:\\Users\\fares\\Play.Catalog\\src\\Play.Catalog.Service\\Play.Catalog.Service.csproj": {
+    "c:\\Users\\fares\\Play.Catalog\\src\\Play.Catalog.Service\\Play.Catalog.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\fares\\Play.Catalog\\src\\Play.Catalog.Service\\Play.Catalog.Service.csproj",
+        "projectUniqueName": "c:\\Users\\fares\\Play.Catalog\\src\\Play.Catalog.Service\\Play.Catalog.Service.csproj",
         "projectName": "Play.Catalog.Service",
-        "projectPath": "C:\\Users\\fares\\Play.Catalog\\src\\Play.Catalog.Service\\Play.Catalog.Service.csproj",
+        "projectPath": "c:\\Users\\fares\\Play.Catalog\\src\\Play.Catalog.Service\\Play.Catalog.Service.csproj",
         "packagesPath": "C:\\Users\\fares\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\fares\\Play.Catalog\\src\\Play.Catalog.Service\\obj\\",
+        "outputPath": "c:\\Users\\fares\\Play.Catalog\\src\\Play.Catalog.Service\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\fares\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -43,7 +43,7 @@
               "target": "Package",
               "version": "[7.0.5, )"
             },
-            "MongoDB.Driver": {
+            "MongoDb.Driver": {
               "target": "Package",
               "version": "[2.21.0, )"
             },
